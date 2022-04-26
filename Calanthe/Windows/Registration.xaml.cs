@@ -21,6 +21,9 @@ namespace Calanthe
     /// </summary>
     public partial class Registration : Window
     {
+        Student user = new Student();
+        CalantheEntities db = new CalantheEntities();
+
         public Registration()
         {
             InitializeComponent();
@@ -35,9 +38,49 @@ namespace Calanthe
 
         private void Continue_b_Click(object sender, RoutedEventArgs e)
         {
-            Menu _win = new Menu();
-            this.Close();
-            _win.Show();
+            int n = 0;
+
+            if (Password.Text == "" || Login.Text == "" || Mail.Text == "") MessageBox.Show("Вы ввели не все данные!");
+
+            else
+            {
+                foreach (var item in db.Student)
+                {
+                    if (item.Email == Mail.Text)
+                    {
+                        user = item;
+                        n = 1;
+                    }
+                }
+                if (n == 0)
+                {
+                    string[] dataLogin = Mail.Text.Split('@');
+                    if (dataLogin.Length == 2)
+                    {
+                        string[] data2Login = dataLogin[1].Split('.');
+                        if (data2Login.Length == 2)
+                        {
+                            if (Password.Text.Length >= 8)
+                            {
+                                user.Email = Mail.Text.Trim();
+                                user.Login = Login.Text.Trim();
+                                user.Password = Password.Text.Trim();
+                                db.Student.Add(user);
+                                db.SaveChanges();
+                                Autorization _win = new Autorization();
+                                this.Close();
+                                _win.Show();
+                            }
+                            else MessageBox.Show("Пароль должен быть более 8 символов!");
+                        }
+                        else MessageBox.Show("Электронная почта должна быть в формате:.. @ .. . ..!");
+                    }
+                    else MessageBox.Show("Электронная почта должна быть в формате:.. @ .. . ..!");
+                }
+                if(n == 1) MessageBox.Show("Эта почта уже используется!");
+            }
         }
     }
+    
 }
+

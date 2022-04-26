@@ -68,3 +68,10 @@ C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.csproj.Genera
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.csproj.CoreCompileInputs.cache
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.exe
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.pdb
+C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\EntityFramework.dll
+C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\EntityFramework.xml
+C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe_Content.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.csproj.CopyComplete
