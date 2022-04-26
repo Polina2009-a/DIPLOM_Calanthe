@@ -1,0 +1,53 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Lessons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Авторизация" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="432*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b2" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b2_Click"></Button>
+
+        <ScrollViewer x:Name="PanelLessons" Grid.Column="1" Grid.Row="1">
+            <WrapPanel>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Alfabeto"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Sustantivos"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Adjetivos"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Pronombres"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 1"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 2"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Acusativo"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Dativo"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Genitivo"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Instrumental"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Prepositivo"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Pasado"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Futuro"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Partículas"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Preguntas"/>
+                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Preposiciones"/>
+            </WrapPanel>
+        </ScrollViewer>
+
+        <WrapPanel Visibility="Hidden" x:Name="PanelMenu" Grid.Column="1" Grid.Row="1" Margin="180,0,180,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button  x:Name="Teoria_b" Grid.Column="1" Grid.Row="2" Content="Теория" Margin="0,0,0,20" />
+            <Button  x:Name="Practic_b" Grid.Column="1" Grid.Row="2" Content="Практика" Margin="0,0,0,20" Click="Practic_b_Click" />
+        </WrapPanel>
+        <Button Visibility="Hidden" x:Name="Dictionary_b" Grid.Column="2" Grid.Row="2" Content="Словарь" Margin="-212,10,57,24" Width="Auto" Click="Dictionary_b_Click"/>
+
+    </Grid>
+</Window>

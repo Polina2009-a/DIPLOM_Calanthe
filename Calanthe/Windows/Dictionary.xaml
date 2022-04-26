@@ -1,0 +1,42 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Dictionary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Словарь" WindowStartupLocation="CenterScreen" >
+    <Grid RenderTransformOrigin="0.048,0.142">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="429*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Назад" Margin="16,28,16,27" Click="Back_b_Click" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Button>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="113*"/>
+            </Grid.RowDefinitions>
+
+            <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
+                <TextBox x:Name="tbResearch" Width="315" Foreground="#FF0A0808"></TextBox>
+                <Button x:Name="Research_bt" Style="{StaticResource Research}" Width="147" Height="51" BorderBrush="{x:Null}"></Button>
+            </WrapPanel>
+            <DataGrid x:Name="dbWords" Grid.Row="1" Background="#FFC578C2" Margin="0,-24,0,0"></DataGrid>
+        </Grid>
+
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button x:Name="Edit_b" Content="Добавить" Click="Edit_b_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
+
