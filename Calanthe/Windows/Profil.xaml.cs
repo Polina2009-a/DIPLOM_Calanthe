@@ -21,21 +21,23 @@ namespace Calanthe
     /// </summary>
     public partial class Profil : Window
     {
-        public Profil()
+        string mail;
+        public Profil(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
         }
 
         private void Continue_b_Click(object sender, RoutedEventArgs e)
         {
-            EditProfil _win = new EditProfil();
+            EditProfil _win = new EditProfil(mail);
             this.Close();
             _win.Show();
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
-            Menu _win = new Menu();
+            Menu _win = new Menu(mail);
             this.Close();
             _win.Show();
         }

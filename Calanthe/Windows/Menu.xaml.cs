@@ -21,9 +21,11 @@ namespace Calanthe
     /// </summary>
     public partial class Menu : Window
     {
-        public Menu()
+        string mail;
+        public Menu(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
@@ -35,21 +37,21 @@ namespace Calanthe
 
         private void Lessons_b_Click(object sender, RoutedEventArgs e)
         {
-            Lessons _win = new Lessons();
+            Lessons _win = new Lessons(mail);
             this.Close();
             _win.Show();
         }
 
         private void Dictionary_b_Click(object sender, RoutedEventArgs e)
         {
-            Dictionary _win = new Dictionary();
+            Dictionary _win = new Dictionary(mail);
             this.Close();
             _win.Show();
         }
 
         private void Profile_b_Click(object sender, RoutedEventArgs e)
         {
-            Profil _win = new Profil();
+            Profil _win = new Profil(mail);
             this.Close();
             _win.Show();
         }

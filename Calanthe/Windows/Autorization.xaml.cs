@@ -66,7 +66,7 @@ namespace Calanthe
                 }
                 if (n == 1)
                 {
-                    Menu _win = new Menu();
+                    Menu _win = new Menu(Mail.Text);
                     this.Close();
                     _win.Show();
                     MessageBox.Show("Добро пожаловать!");
@@ -95,85 +95,28 @@ namespace Calanthe
                     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
                     var stringChars = new char[8];
                     var random = new Random();
+                    string finalString = "";
 
                     for (int i = 0; i < stringChars.Length; i++)
                     {
                         stringChars[i] = chars[random.Next(chars.Length)];
+                        finalString += stringChars[i];
                     }
-                    var finalString = new String(stringChars);
-                    MailAddress from = new MailAddress("Calanthe.RusoIdioma@mail.ru", "Calanthe");
+
+                    MailAddress from = new MailAddress("Polina_alekseevna_valova@mail.ru", "Calanthe - Ruso Idioma");
                     MailAddress to = new MailAddress(Mail.Text);
                     MailMessage m = new MailMessage(from, to);
                     m.Subject = "Восстановление пароля";
                     m.Body = "Ваш новый пароль:" + finalString;
                     m.IsBodyHtml = true;
-                    SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                    smtp.Credentials = new NetworkCredential("Calanthe.RusoIdioma@mail.ru", "123qweQWE!@#");
+                    SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
+                    smtp.Credentials = new NetworkCredential("Polina_alekseevna_valova@mail.ru", "D3vTLNZE6CBLNB4dKAEG");
                     smtp.EnableSsl = true;
                     smtp.Send(m);
                     MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");
-
                 }
                 else MessageBox.Show("Пользователя с такой электронной почтой не существует!");
-
-
             }
-        }
-
-        private void NewPassword_Click(object sender, RoutedEventArgs e)
-        {
-            int n = 0;
-            if (Mail.Text == "") MessageBox.Show("Введите почту, а потом нажмите сюда ещё раз!");
-            else
-            {
-                foreach (var user in db.Student)
-                {
-                    if (Mail.Text == user.Email)
-                    {
-                        n = 1;
-                        break;
-                    }
-                }
-
-                if (n == 1)
-                {
-                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                    var stringChars = new char[8];
-                    var random = new Random();
-
-                    for (int i = 0; i < stringChars.Length; i++)
-                    {
-                        stringChars[i] = chars[random.Next(chars.Length)];
-                    }
-                    var finalString = new String(stringChars);
-                    MailAddress from = new MailAddress("calanthe.rusoidioma@mail.ru", "123qweQWE!@#");
-                    MailAddress to = new MailAddress(Mail.Text);
-                    MailMessage m = new MailMessage(from, to);
-                    m.Subject = "Восстановление пароля";
-                    m.Body = "Ваш новый пароль:" + finalString;
-                    m.IsBodyHtml = true;
-                    SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                    smtp.Credentials = new NetworkCredential("Calanthe.RusoIdioma@mail.ru", "123qweQWE!@#");
-                    smtp.EnableSsl = true;
-                    smtp.Send(m);
-                    MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");
-
-                }
-                else MessageBox.Show("Пользователя с такой электронной почтой не существует!");
-
-            }
-        }
+        }  
     }
 }
-
-//SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 25);
-//Smtp.Credentials = new NetworkCredential("Calanthe.RusoIdioma@mail.ru", "123qweQWE!@#");
-//Smtp.EnableSsl = false;
-
-//MailMessage message = new MailMessage();
-//message.From = new MailAddress("Calanthe.RusoIdioma@mail.ru");
-//message.To.Add(new MailAddress(Mail.Text));
-//message.Subject = "Восстановление пароля";
-//message.Body = "Ваш новый пароль:" + finalString;
-//Smtp.Send(message);
-//MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");

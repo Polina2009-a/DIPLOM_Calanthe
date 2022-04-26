@@ -21,21 +21,23 @@ namespace Calanthe
     /// </summary>
     public partial class Dictionary : Window
     {
-        public Dictionary()
+        string mail;
+        public Dictionary(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
-            Menu _win = new Menu();
+            Menu _win = new Menu(mail);
             this.Close();
             _win.Show();
         }
 
         private void Edit_b_Click(object sender, RoutedEventArgs e)
         {
-            EditWords _win = new EditWords();
+            EditWords _win = new EditWords(mail);
             this.Close();
             _win.Show();
         }

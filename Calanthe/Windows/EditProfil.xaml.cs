@@ -21,14 +21,30 @@ namespace Calanthe
     /// </summary>
     public partial class EditProfil : Window
     {
-        public EditProfil()
+        string mail;
+        string password;
+        Student user = new Student();
+        CalantheEntities db = new CalantheEntities();
+
+        public EditProfil(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
+            Mail.Text = mail;
+            foreach (var user in db.Student)
+            {
+                if (Mail.Text == user.Email)
+                {
+                    Login.Text = user.Login;
+                    Password.Text = user.Password;
+                    break;
+                }
+            }
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
-            Profil _win = new Profil();
+            Profil _win = new Profil(mail);
             this.Close();
             _win.Show();
         }

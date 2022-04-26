@@ -21,14 +21,16 @@ namespace Calanthe
     /// </summary>
     public partial class Practice : Window
     {
-        public Practice()
+        string mail;
+        public Practice(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
-            Lessons _win = new Lessons();
+            Lessons _win = new Lessons(mail);
             this.Close();
             _win.Show();
         }

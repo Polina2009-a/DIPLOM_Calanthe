@@ -21,14 +21,16 @@ namespace Calanthe
     /// </summary>
     public partial class EditWords : Window
     {
-        public EditWords()
+        string mail;
+        public EditWords(string mail)
         {
             InitializeComponent();
+            this.mail = mail;
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
-            Dictionary _win = new Dictionary();
+            Dictionary _win = new Dictionary(mail);
             this.Close();
             _win.Show();
         }
