@@ -26,7 +26,7 @@ namespace Calanthe
     /// </summary>
     public partial class Autorization : Window
     {
-        Student user = new Student();
+        Student _user = new Student();
         CalantheEntities db = new CalantheEntities();
 
         public Autorization()
@@ -77,45 +77,56 @@ namespace Calanthe
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            int n = 0;
-            if (Mail.Text == "") MessageBox.Show("Введите почту, а потом нажмите сюда ещё раз!");
-            else
+            try
             {
-                foreach (var user in db.Student)
+                int n = 0;
+                if (Mail.Text == "") MessageBox.Show("Введите почту, а потом нажмите сюда ещё раз!");
+                else
                 {
-                    if (Mail.Text == user.Email)
+                    foreach (var user in db.Student)
                     {
-                        n = 1;
-                        break;
-                    }
-                }
-
-                if (n == 1)
-                {
-                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                    var stringChars = new char[8];
-                    var random = new Random();
-                    string finalString = "";
-
-                    for (int i = 0; i < stringChars.Length; i++)
-                    {
-                        stringChars[i] = chars[random.Next(chars.Length)];
-                        finalString += stringChars[i];
+                        if (Mail.Text == user.Email)
+                        {
+                            _user = user;
+                            n = 1;
+                            break;
+                        }
                     }
 
-                    MailAddress from = new MailAddress("Polina_alekseevna_valova@mail.ru", "Calanthe - Ruso Idioma");
-                    MailAddress to = new MailAddress(Mail.Text);
-                    MailMessage m = new MailMessage(from, to);
-                    m.Subject = "Восстановление пароля";
-                    m.Body = "Ваш новый пароль:" + finalString;
-                    m.IsBodyHtml = true;
-                    SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
-                    smtp.Credentials = new NetworkCredential("Polina_alekseevna_valova@mail.ru", "D3vTLNZE6CBLNB4dKAEG");
-                    smtp.EnableSsl = true;
-                    smtp.Send(m);
-                    MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");
+                    if (n == 1)
+                    {
+                        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                        var stringChars = new char[8];
+                        var random = new Random();
+                        string finalString = "";
+
+                        for (int i = 0; i < stringChars.Length; i++)
+                        {
+                            stringChars[i] = chars[random.Next(chars.Length)];
+                            finalString += stringChars[i];
+                        }
+
+                        MailAddress from = new MailAddress("Polina_alekseevna_valova@mail.ru", "Calanthe - Ruso Idioma");
+                        MailAddress to = new MailAddress(Mail.Text);
+                        MailMessage m = new MailMessage(from, to);
+                        m.Subject = "Восстановление пароля";
+                        m.Body = "Ваш новый пароль:" + finalString;
+                        m.IsBodyHtml = true;
+                        SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
+                        smtp.Credentials = new NetworkCredential("Polina_alekseevna_valova@mail.ru", "D3vTLNZE6CBLNB4dKAEG");
+                        smtp.EnableSsl = true;
+                        smtp.Send(m);
+                        MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");
+
+                        _user.Password = finalString;
+                        db.SaveChanges();
+                    }
+                    else MessageBox.Show("Пользователя с такой электронной почтой не существует!");
                 }
-                else MessageBox.Show("Пользователя с такой электронной почтой не существует!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Нет подключения к интернету!");
             }
         }  
     }

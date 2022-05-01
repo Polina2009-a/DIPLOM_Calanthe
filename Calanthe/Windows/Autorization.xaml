@@ -45,18 +45,20 @@
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
+            <TextBox Visibility="Hidden" x:Name="NewPassword" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </TextBox.Background>
+            </TextBox>
             <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Пароль</Label>
             <PasswordBox x:Name="Password" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}">
                 <PasswordBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </PasswordBox.Background>
             </PasswordBox>
-
-            <!--<Button Name="NewPassword" Grid.Row="5" Grid.Column="1" Content="Забыли пароль?" FontSize="18" Height="Auto" Margin="20,20,5,10" Click="NewPassword_Click"></Button>-->
             <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18"><Hyperlink Foreground="#FFDB53FF" Click="Hyperlink_Click">Забыли пароль?</Hyperlink></TextBlock>
         </Grid>
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Назад" Margin="16,28,16,27" Click="Back_b_Click"></Button>
-
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Margin="112,0" Width="680">
             <Button x:Name="registration_b" Content="Регистрация" Click="registration_b_Click_1"/>
             <Button x:Name="Continue_b" Content="Продолжить" Click="Continue_b_Click_1" />
