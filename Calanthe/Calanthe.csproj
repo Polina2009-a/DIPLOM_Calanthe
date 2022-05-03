@@ -100,38 +100,38 @@
     <Compile Include="Vocabulary.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\EditProfil.xaml.cs">
+    <Compile Include="Profil\EditProfil.xaml.cs">
       <DependentUpon>EditProfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Profil.xaml.cs">
+    <Compile Include="Profil\Profil.xaml.cs">
       <DependentUpon>Profil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Lessons.xaml.cs">
+    <Compile Include="Lessons\Lessons.xaml.cs">
       <DependentUpon>Lessons.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\EditWords.xaml.cs">
+    <Compile Include="Dictionary\EditWords.xaml.cs">
       <DependentUpon>EditWords.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Dictionary.xaml.cs">
+    <Compile Include="Dictionary\Dictionary.xaml.cs">
       <DependentUpon>Dictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Practice.xaml.cs">
+    <Compile Include="Lessons\Practice.xaml.cs">
       <DependentUpon>Practice.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Menu.xaml.cs">
+    <Compile Include="Menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Registration.xaml.cs">
+    <Compile Include="Registration\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Autorization.xaml.cs">
+    <Compile Include="Autorization\Autorization.xaml.cs">
       <DependentUpon>Autorization.xaml</DependentUpon>
     </Compile>
     <Page Include="Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -139,43 +139,43 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\EditProfil.xaml">
+    <Page Include="Profil\EditProfil.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Profil.xaml">
+    <Page Include="Profil\Profil.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Lessons.xaml">
+    <Page Include="Lessons\Lessons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\EditWords.xaml">
+    <Page Include="Dictionary\EditWords.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Dictionary.xaml">
+    <Page Include="Dictionary\Dictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Practice.xaml">
+    <Page Include="Lessons\Practice.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Menu.xaml">
+    <Page Include="Menu\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Registration.xaml">
+    <Page Include="Registration\Registration.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\Autorization.xaml">
+    <Page Include="Autorization\Autorization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -70,9 +70,9 @@
     </Style>
 
     <Style TargetType="Button" x:Key="Less">
-        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontSize" Value="26"/>
         <Setter Property="Margin" Value="10"/>
-        <Setter Property="Height" Value="111"/>
+        <Setter Property="Height" Value="140"/>
         <Setter Property="Width" Value="195"/>
         <Setter Property="Foreground" Value="#FF171A27"/>
         <Setter Property="FontWeight" Value="Bold"/>

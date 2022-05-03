@@ -75,3 +75,13 @@ C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\EntityFramework.SqlSer
 C:\Users\Полина\Desktop\Calanthe\Calanthe\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe_Content.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Calanthe.csproj.CopyComplete
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\MainWindow\MainWindow.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Profil\EditProfil.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Profil\Profil.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Lessons.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\EditWords.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\Dictionary.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Practice.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Menu\Menu.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Registration\Registration.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Autorization\Autorization.g.cs

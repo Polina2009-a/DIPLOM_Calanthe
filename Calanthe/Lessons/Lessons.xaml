@@ -24,22 +24,22 @@
 
         <ScrollViewer x:Name="PanelLessons" Grid.Column="1" Grid.Row="1">
             <WrapPanel>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Alfabeto"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Sustantivos"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Adjetivos"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Pronombres"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 1"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 2"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Acusativo"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Dativo"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Genitivo"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Instrumental"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Prepositivo"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Pasado"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Futuro"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Partículas"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Preguntas"/>
-                <Button Style="{StaticResource Less}" Click="ViewLesson" Content="Preposiciones"/>
+                <Button x:Name="Alphabet" Style="{StaticResource Less}" Click="ViewLesson" Content="Alfabeto"/>
+                <Button x:Name="Nouns" Style="{StaticResource Less}" Click="ViewLesson" Content="Sustantivos"/>
+                <Button x:Name="Adjectives" Style="{StaticResource Less}" Click="ViewLesson" Content="Adjetivos"/>
+                <Button x:Name="Pronouns" Style="{StaticResource Less}" Click="ViewLesson" Content="Pronombres"/>
+                <Button x:Name="Verbs1" Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 1"/>
+                <Button x:Name="Verbs2" Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 2"/>
+                <Button x:Name="Accusative" Style="{StaticResource Less}" Click="ViewLesson" Content="Acusativo"/>
+                <Button x:Name="Dative" Style="{StaticResource Less}" Click="ViewLesson" Content="Dativo"/>
+                <Button x:Name="Genitive" Style="{StaticResource Less}" Click="ViewLesson" Content="Genitivo"/>
+                <Button x:Name="Ablative" Style="{StaticResource Less}" Click="ViewLesson" Content="Instrumental"/>
+                <Button x:Name="Prepositional" Style="{StaticResource Less}" Click="ViewLesson" Content="Prepositivo"/>
+                <Button x:Name="Past" Style="{StaticResource Less}" Click="ViewLesson" Content="Pasado"/>
+                <Button x:Name="Future" Style="{StaticResource Less}" Click="ViewLesson" Content="Futuro"/>
+                <Button x:Name="Particles" Style="{StaticResource Less}" Click="ViewLesson" Content="Partículas"/>
+                <Button x:Name="Questions" Style="{StaticResource Less}" Click="ViewLesson" Content="Preguntas"/>
+                <Button x:Name="Prepositions" Style="{StaticResource Less}" Click="ViewLesson" Content="Preposiciones"/>
             </WrapPanel>
         </ScrollViewer>
 
