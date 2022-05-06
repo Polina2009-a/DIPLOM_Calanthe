@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.IO;
 
 namespace Calanthe
 {
@@ -22,10 +23,23 @@ namespace Calanthe
     public partial class Profil : Window
     {
         string mail;
+        Student user = new Student();
+        CalantheEntities db = new CalantheEntities();
         public Profil(string mail)
         {
             InitializeComponent();
             this.mail = mail;
+            
+            foreach (var user in db.Student)
+            {
+                if (mail == user.Email)
+                {
+                    //MemoryStream memory = new MemoryStream(user.Image);
+                    //Image image = Image.FromStream(memory);
+                    //image.Fill = Image;
+                    break;
+                }
+            }
         }
 
         private void Continue_b_Click(object sender, RoutedEventArgs e)

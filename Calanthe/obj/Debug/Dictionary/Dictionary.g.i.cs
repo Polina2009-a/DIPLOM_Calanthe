@@ -75,6 +75,14 @@ namespace Calanthe {
         
         #line 38 "..\..\..\Dictionary\Dictionary.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Back_lessons;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 39 "..\..\..\Dictionary\Dictionary.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Edit_b;
         
         #line default
@@ -129,9 +137,12 @@ namespace Calanthe {
             this.dbWords = ((System.Windows.Controls.DataGrid)(target));
             return;
             case 5:
+            this.Back_lessons = ((System.Windows.Controls.Button)(target));
+            return;
+            case 6:
             this.Edit_b = ((System.Windows.Controls.Button)(target));
             
-            #line 38 "..\..\..\Dictionary\Dictionary.xaml"
+            #line 39 "..\..\..\Dictionary\Dictionary.xaml"
             this.Edit_b.Click += new System.Windows.RoutedEventHandler(this.Edit_b_Click);
             
             #line default

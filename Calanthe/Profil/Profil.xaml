@@ -59,10 +59,10 @@
                 <Rectangle Style="{StaticResource Res_4}"></Rectangle>
             </WrapPanel>
 
-            <Ellipse Grid.Row="0" Margin="273,46,271,35">
-                <Ellipse.Fill>
+            <Ellipse x:Name="image" Grid.Row="0" Margin="273,46,271,35">
+                <!--<Ellipse.Fill>
                     <ImageBrush ImageSource="/Resources/ziro_foto.png"/>
-                </Ellipse.Fill>
+                </Ellipse.Fill>-->
             </Ellipse>
         </Grid>
 

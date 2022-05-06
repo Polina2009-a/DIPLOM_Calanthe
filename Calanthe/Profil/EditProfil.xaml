@@ -74,13 +74,12 @@
                 </TextBox>
             </Grid>
 
-            <Button Grid.Row="0" Content="..." HorizontalAlignment="Right" Margin="0,0,220,29" Width="50" Height="45"  VerticalAlignment="Bottom" FontWeight="Bold"></Button>
+            <Button Grid.Row="0" Content="..." HorizontalAlignment="Right" Margin="0,0,220,29" Width="50" Height="45"  VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click"></Button>
 
             <Ellipse Grid.Row="0" Margin="268,44,268,29">
-                <Ellipse.Fill>
+                <!--<Ellipse.Fill>
                     <ImageBrush ImageSource="/Resources/ziro_foto.png"/>
-                </Ellipse.Fill>
-
+                </Ellipse.Fill>-->
             </Ellipse>
         </Grid>
 
@@ -90,7 +89,7 @@
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Button  x:Name="Save_b" Content="Сохранить" Margin="0,0,40,0" />
-            <Button  x:Name="GoOut_b" Content="Выйти" />
+            <Button  x:Name="GoOut_b" Content="Выйти" Click="GoOut_b_Click" />
         </WrapPanel>
     </Grid>
 </Window>

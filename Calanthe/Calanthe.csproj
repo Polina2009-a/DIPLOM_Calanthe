@@ -222,7 +222,7 @@
     <Resource Include="Resources\Logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\ziro_foto.png" />
+    <Resource Include="Registration\ziro_foto.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">

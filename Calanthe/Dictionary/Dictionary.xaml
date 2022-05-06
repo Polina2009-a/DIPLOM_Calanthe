@@ -34,7 +34,8 @@
             <DataGrid x:Name="dbWords" Grid.Row="1" Background="#FFC578C2" Margin="0,-24,0,0"></DataGrid>
         </Grid>
 
-        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="Back_lessons" Content="Занятия" Click="Back_lessons_Click"/>
             <Button x:Name="Edit_b" Content="Добавить" Click="Edit_b_Click"/>
         </WrapPanel>
     </Grid>

@@ -41,5 +41,12 @@ namespace Calanthe
             this.Close();
             _win.Show();
         }
+
+        private void Back_lessons_Click(object sender, RoutedEventArgs e)
+        {
+            Lessons _win = new Lessons(mail);
+            this.Close();
+            _win.Show();
+        }
     }
 }

@@ -126,7 +126,7 @@ namespace Calanthe
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Нет подключения к интернету!");
+                MessageBox.Show("Нет подключения к интернету или такой почты не существует!");
             }
         }  
     }

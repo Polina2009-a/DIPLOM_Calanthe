@@ -43,7 +43,7 @@ namespace Calanthe {
         
         #line 24 "..\..\..\Menu\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button Lessons_b;
+        internal System.Windows.Controls.Button Profile_b;
         
         #line default
         #line hidden
@@ -51,7 +51,7 @@ namespace Calanthe {
         
         #line 25 "..\..\..\Menu\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button Dictionary_b;
+        internal System.Windows.Controls.Button Lessons_b;
         
         #line default
         #line hidden
@@ -59,7 +59,7 @@ namespace Calanthe {
         
         #line 26 "..\..\..\Menu\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button Profile_b;
+        internal System.Windows.Controls.Button Dictionary_b;
         
         #line default
         #line hidden
@@ -103,28 +103,28 @@ namespace Calanthe {
             switch (connectionId)
             {
             case 1:
-            this.Lessons_b = ((System.Windows.Controls.Button)(target));
+            this.Profile_b = ((System.Windows.Controls.Button)(target));
             
             #line 24 "..\..\..\Menu\Menu.xaml"
-            this.Lessons_b.Click += new System.Windows.RoutedEventHandler(this.Lessons_b_Click);
+            this.Profile_b.Click += new System.Windows.RoutedEventHandler(this.Profile_b_Click);
             
             #line default
             #line hidden
             return;
             case 2:
-            this.Dictionary_b = ((System.Windows.Controls.Button)(target));
+            this.Lessons_b = ((System.Windows.Controls.Button)(target));
             
             #line 25 "..\..\..\Menu\Menu.xaml"
-            this.Dictionary_b.Click += new System.Windows.RoutedEventHandler(this.Dictionary_b_Click);
+            this.Lessons_b.Click += new System.Windows.RoutedEventHandler(this.Lessons_b_Click);
             
             #line default
             #line hidden
             return;
             case 3:
-            this.Profile_b = ((System.Windows.Controls.Button)(target));
+            this.Dictionary_b = ((System.Windows.Controls.Button)(target));
             
             #line 26 "..\..\..\Menu\Menu.xaml"
-            this.Profile_b.Click += new System.Windows.RoutedEventHandler(this.Profile_b_Click);
+            this.Dictionary_b.Click += new System.Windows.RoutedEventHandler(this.Dictionary_b_Click);
             
             #line default
             #line hidden

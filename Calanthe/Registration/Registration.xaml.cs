@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Microsoft.Win32;
+using System.IO;
 
 namespace Calanthe
 {
@@ -39,6 +41,8 @@ namespace Calanthe
         private void Continue_b_Click(object sender, RoutedEventArgs e)
         {
             int n = 0;
+            byte[] buffer;
+            buffer = System.IO.File.ReadAllBytes(@"ziro_foto.png");
 
             if (Password.Text == "" || Login.Text == "" || Mail.Text == "") MessageBox.Show("Вы ввели не все данные!");
 
@@ -62,9 +66,12 @@ namespace Calanthe
                         {
                             if (Password.Text.Length >= 8)
                             {
+
+                               
                                 user.Email = Mail.Text.Trim();
                                 user.Login = Login.Text.Trim();
                                 user.Password = Password.Text.Trim();
+                                user.Image = buffer;
                                 db.Student.Add(user);
                                 db.SaveChanges();
                                 Autorization _win = new Autorization();
