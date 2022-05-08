@@ -61,7 +61,7 @@
                     </TextBox.Background>
                 </TextBox>
                 <Label Grid.Row="3" Grid.Column="1">Электронная почта</Label>
-                <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}">
+                <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" IsReadOnly ="True">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Resources/Line.png"/>
                     </TextBox.Background>
@@ -76,11 +76,7 @@
 
             <Button Grid.Row="0" Content="..." HorizontalAlignment="Right" Margin="0,0,220,29" Width="50" Height="45"  VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click"></Button>
 
-            <Ellipse Grid.Row="0" Margin="268,44,268,29">
-                <!--<Ellipse.Fill>
-                    <ImageBrush ImageSource="/Resources/ziro_foto.png"/>
-                </Ellipse.Fill>-->
-            </Ellipse>
+            <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="268,44,268,29"></Ellipse>
         </Grid>
 
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
@@ -88,7 +84,7 @@
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <Button  x:Name="Save_b" Content="Сохранить" Margin="0,0,40,0" />
+            <Button  x:Name="Save_b" Content="Сохранить" Margin="0,0,40,0" Click="Save_b_Click" />
             <Button  x:Name="GoOut_b" Content="Выйти" Click="GoOut_b_Click" />
         </WrapPanel>
     </Grid>

@@ -38,6 +38,7 @@ namespace Calanthe
             {
                 if (Mail.Text == user.Email)
                 {
+                    imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\Полина\Desktop\Calanthe\Calanthe\Registration\ziro_foto.png")));
                     Login.Text = user.Login;
                     Password.Text = user.Password;
                     break;
@@ -94,6 +95,21 @@ namespace Calanthe
             Autorization _win = new Autorization();
             this.Close();
             _win.Show();
+        }
+
+        private void Save_b_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var user in db.Student)
+            {
+                if (Mail.Text == user.Email)
+                {
+                    user.Login = Login.Text;
+                    user.Password = Password.Text;
+                    break;
+                }
+            }
+            db.SaveChanges();
+            MessageBox.Show("Сохранено!");
         }
     }
 }

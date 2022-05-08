@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using System.IO;
+using System.Windows.Media.Converters;
 
 namespace Calanthe
 {
@@ -25,6 +26,8 @@ namespace Calanthe
         string mail;
         Student user = new Student();
         CalantheEntities db = new CalantheEntities();
+        byte[] buffer;
+
         public Profil(string mail)
         {
             InitializeComponent();
@@ -34,9 +37,9 @@ namespace Calanthe
             {
                 if (mail == user.Email)
                 {
-                    //MemoryStream memory = new MemoryStream(user.Image);
-                    //Image image = Image.FromStream(memory);
-                    //image.Fill = Image;
+                    //user.Image = buffer;
+                   //Image image = byteArrayToImage(buffer);
+                    imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\Полина\Desktop\Calanthe\Calanthe\Registration\ziro_foto.png")));
                     break;
                 }
             }
