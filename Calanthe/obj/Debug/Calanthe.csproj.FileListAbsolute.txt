@@ -75,3 +75,7 @@ C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Practice.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Menu\Menu.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Registration\Registration.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Autorization\Autorization.baml
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\DelWords.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\DelWords.baml
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\AddWords.g.cs
+C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\AddWords.baml

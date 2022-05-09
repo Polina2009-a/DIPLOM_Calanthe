@@ -22,10 +22,12 @@ namespace Calanthe
     public partial class Dictionary : Window
     {
         string mail;
+        CalantheEntities _context = new CalantheEntities();
         public Dictionary(string mail)
         {
             InitializeComponent();
             this.mail = mail;
+            dbWords.ItemsSource = _context.Vocabulary.ToList();      
         }
 
         private void Back_b_Click(object sender, RoutedEventArgs e)
@@ -35,9 +37,9 @@ namespace Calanthe
             _win.Show();
         }
 
-        private void Edit_b_Click(object sender, RoutedEventArgs e)
+        private void Add_b_Click(object sender, RoutedEventArgs e)
         {
-            EditWords _win = new EditWords(mail);
+            AddWords _win = new AddWords(mail);
             this.Close();
             _win.Show();
         }
@@ -47,6 +49,35 @@ namespace Calanthe
             Lessons _win = new Lessons(mail);
             this.Close();
             _win.Show();
+        }
+
+        private void Research_bt_Click(object sender, RoutedEventArgs e)
+        {
+            var current_item = CalantheEntities.GetContext().Vocabulary.ToList();
+            current_item = current_item.Where(p => p.Translation.ToString().ToLower().Contains(tbResearch.Text.ToLower())).ToList();
+            dbWords.ItemsSource = current_item;
+        }
+
+        private void edit_b_Click_1(object sender, RoutedEventArgs e)
+        {
+            EditWords _win = new EditWords(mail, _context, sender, this);
+            _win.Show();
+            this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var current_item = CalantheEntities.GetContext().Vocabulary.ToList();
+            current_item = current_item.Where(p => p.Email.ToString().ToLower().Contains(mail.ToLower())).ToList();
+            CalantheEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+            dbWords.ItemsSource = current_item;
+        }
+
+        private void del_b_Click(object sender, RoutedEventArgs e)
+        {
+            DelWords _win = new DelWords(mail, _context, sender, this);
+            _win.Show();
+            this.Close();
         }
     }
 }

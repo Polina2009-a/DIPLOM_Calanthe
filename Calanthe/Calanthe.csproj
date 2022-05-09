@@ -67,6 +67,12 @@
     <Compile Include="Answers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dictionary\DelWords.xaml.cs">
+      <DependentUpon>DelWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\AddWords.xaml.cs">
+      <DependentUpon>AddWords.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,6 +136,14 @@
     <Page Include="Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary\DelWords.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary\AddWords.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

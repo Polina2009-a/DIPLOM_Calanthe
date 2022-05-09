@@ -1,12 +1,12 @@
 ﻿<Window Style="{StaticResource win}"
-        x:Class="Calanthe.EditWords"
+        x:Class="Calanthe.DelWords"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Изменение словаря" WindowStartupLocation="CenterScreen" >
+        Title="Удалить слово" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -40,13 +40,13 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="34" Width="61">Слово</Label>
-            <TextBox x:Name="Word" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
+            <TextBox x:Name="Word" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}" IsReadOnly="True">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
             <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" Height="34">Перевод</Label>
-            <TextBox x:Name="Translite" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" Margin="0,10,0,0">
+            <TextBox x:Name="Translite" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" IsReadOnly="True">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
@@ -55,7 +55,7 @@
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Content="Назад" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Click="Back_b_Click" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Button>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
-            <Button x:Name="Save_b" Content="Сохранить"  Click="Save_b_Click"/>
+            <Button x:Name="Del_b" Content="Удалить" Click="Del_b_Click_1"/>
         </WrapPanel>
     </Grid>
 </Window>

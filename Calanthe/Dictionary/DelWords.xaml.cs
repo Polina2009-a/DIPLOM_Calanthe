@@ -19,7 +19,7 @@ namespace Calanthe
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class EditWords : Window
+    public partial class DelWords : Window
     {
         string mail;
         private CalantheEntities _context;
@@ -27,7 +27,7 @@ namespace Calanthe
         private Dictionary dictionary;
         int id;
 
-        public EditWords(string mail, CalantheEntities context, object o, Dictionary _dictionary)
+        public DelWords(string mail, CalantheEntities context, object o, Dictionary _dictionary)
         {
             InitializeComponent();
             this.mail = mail;
@@ -47,15 +47,14 @@ namespace Calanthe
             _win.Show();
         }
 
-        private void Save_b_Click(object sender, RoutedEventArgs e)
+        private void Del_b_Click_1(object sender, RoutedEventArgs e)
         {
             foreach (var user in _context.Vocabulary)
             {
                 if (id == user.ID)
                 {
                     _vocabulary = user;
-                    _vocabulary.Word = Word.Text;
-                    _vocabulary.Translation = Translite.Text;
+                    _context.Vocabulary.Remove(_vocabulary);
                     break;
                 }
             }
@@ -63,7 +62,7 @@ namespace Calanthe
             MessageBox.Show("Сохранено!");
             Dictionary _win = new Dictionary(mail);
             _win.Show();
-            this.Close();
+            //this.Close();
         }
     }
 }

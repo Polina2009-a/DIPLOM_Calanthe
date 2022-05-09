@@ -26,7 +26,7 @@ namespace Calanthe
         string mail;
         Student user = new Student();
         CalantheEntities db = new CalantheEntities();
-        byte[] buffer;
+        string filename = null;
 
         public Profil(string mail)
         {
@@ -37,9 +37,9 @@ namespace Calanthe
             {
                 if (mail == user.Email)
                 {
-                    //user.Image = buffer;
-                   //Image image = byteArrayToImage(buffer);
                     imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\Полина\Desktop\Calanthe\Calanthe\Registration\ziro_foto.png")));
+                    //File.WriteAllBytes(filename,user.Image);
+                    //imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"filename")));
                     break;
                 }
             }

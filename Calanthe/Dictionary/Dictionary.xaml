@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Словарь" WindowStartupLocation="CenterScreen" >
+        Title="Словарь" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" >
     <Grid RenderTransformOrigin="0.048,0.142">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -29,14 +29,34 @@
 
             <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
                 <TextBox x:Name="tbResearch" Width="315" Foreground="#FF0A0808"></TextBox>
-                <Button x:Name="Research_bt" Style="{StaticResource Research}" Width="147" Height="51" BorderBrush="{x:Null}"></Button>
+                <Button x:Name="Research_bt" Style="{StaticResource Research}"  BorderBrush="{x:Null}" Click="Research_bt_Click"></Button>
             </WrapPanel>
-            <DataGrid x:Name="dbWords" Grid.Row="1" Background="#FFC578C2" Margin="0,-24,0,0"></DataGrid>
+
+            <DataGrid  Style="{StaticResource data_grid}" x:Name="dbWords" Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Слово" Binding="{Binding Word}" Width="250"/>
+                    <DataGridTextColumn Header="Перевод" Binding="{Binding Translation}" Width="250"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource Research}" x:Name="edit_b" Content="Редактировать" Click="edit_b_Click_1"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource Research}" x:Name="del_b" Content="Удалить" Click="del_b_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="Back_lessons" Content="Занятия" Click="Back_lessons_Click"/>
-            <Button x:Name="Edit_b" Content="Добавить" Click="Edit_b_Click"/>
+            <Button x:Name="Add_b" Content="Добавить" Click="Add_b_Click"/>
         </WrapPanel>
     </Grid>
 </Window>

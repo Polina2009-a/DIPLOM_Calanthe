@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Полина\Desktop\Calanthe\Calanthe\App.xaml
-11-2033984770
+13-1546672160
 21750853300
-251816729269
+27-300744652
 18-21314738
-Dictionary.xaml;MainWindow\MainWindow.xaml;Profil\EditProfil.xaml;Profil\Profil.xaml;Lessons\Lessons.xaml;Dictionary\EditWords.xaml;Dictionary\Dictionary.xaml;Lessons\Practice.xaml;Menu\Menu.xaml;Registration\Registration.xaml;Autorization\Autorization.xaml;
+Dictionary.xaml;Dictionary\DelWords.xaml;Dictionary\AddWords.xaml;MainWindow\MainWindow.xaml;Profil\EditProfil.xaml;Profil\Profil.xaml;Lessons\Lessons.xaml;Dictionary\EditWords.xaml;Dictionary\Dictionary.xaml;Lessons\Practice.xaml;Menu\Menu.xaml;Registration\Registration.xaml;Autorization\Autorization.xaml;
 
 True
 
