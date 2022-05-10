@@ -28,14 +28,18 @@
             </Grid.RowDefinitions>
 
             <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
-                <TextBox x:Name="tbResearch" Width="315" Foreground="#FF0A0808"></TextBox>
-                <Button x:Name="Research_bt" Style="{StaticResource Research}"  BorderBrush="{x:Null}" Click="Research_bt_Click"></Button>
+                <Canvas Width="58">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Research.png" Stretch="Uniform"/>
+                    </Canvas.Background>
+                </Canvas>
+                <TextBox x:Name="tbResearch" Width="267" Foreground="#FF0A0808" TextChanged="tbResearch_TextChanged"></TextBox>
             </WrapPanel>
 
             <DataGrid  Style="{StaticResource data_grid}" x:Name="dbWords" Grid.Row="1">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Слово" Binding="{Binding Word}" Width="250"/>
-                    <DataGridTextColumn Header="Перевод" Binding="{Binding Translation}" Width="250"/>
+                    <DataGridTextColumn Header="Слово" Binding="{Binding Word}" Width="*"/>
+                    <DataGridTextColumn Header="Перевод" Binding="{Binding Translation}" Width="*"/>
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

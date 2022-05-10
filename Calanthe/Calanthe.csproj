@@ -121,9 +121,6 @@
     <Compile Include="Dictionary\Dictionary.xaml.cs">
       <DependentUpon>Dictionary.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lessons\Practice.xaml.cs">
-      <DependentUpon>Practice.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -174,10 +171,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Dictionary\Dictionary.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Lessons\Practice.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -239,6 +232,7 @@
     <Resource Include="Registration\ziro_foto.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Dictionary\Research.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -249,6 +243,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Profil\Pencil.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

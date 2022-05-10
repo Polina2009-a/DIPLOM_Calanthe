@@ -21,6 +21,8 @@
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
         <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b2" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b2_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b3" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b3_Click"></Button>
+
 
         <ScrollViewer x:Name="PanelLessons" Grid.Column="1" Grid.Row="1">
             <WrapPanel>
@@ -49,5 +51,8 @@
         </WrapPanel>
         <Button Visibility="Hidden" x:Name="Dictionary_b" Grid.Column="2" Grid.Row="2" Content="Словарь" Margin="-212,10,57,24" Width="Auto" Click="Dictionary_b_Click"/>
 
+        <ScrollViewer Visibility="Hidden" x:Name="LessonsPractic" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Background="#FFD6CBD6" Width="894"/>
+        </ScrollViewer>
     </Grid>
 </Window>

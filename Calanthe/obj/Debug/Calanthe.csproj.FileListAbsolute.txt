@@ -61,7 +61,6 @@ C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Profil\Profil.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Lessons.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\EditWords.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\Dictionary.g.cs
-C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Practice.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Menu\Menu.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Registration\Registration.g.cs
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Autorization\Autorization.g.cs
@@ -71,7 +70,6 @@ C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Profil\Profil.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Lessons.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\EditWords.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Dictionary\Dictionary.baml
-C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Lessons\Practice.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Menu\Menu.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Registration\Registration.baml
 C:\Users\Полина\Desktop\Calanthe\Calanthe\obj\Debug\Autorization\Autorization.baml

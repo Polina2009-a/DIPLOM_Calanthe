@@ -35,8 +35,8 @@ namespace Calanthe
         private void Back_b_Click(object sender, RoutedEventArgs e)
         {
             Dictionary _win = new Dictionary(mail);
-            this.Close();
             _win.Show();
+            this.Close();
         }
 
         private void Save_b_Click(object sender, RoutedEventArgs e)

@@ -62,7 +62,7 @@ namespace Calanthe
             MessageBox.Show("Сохранено!");
             Dictionary _win = new Dictionary(mail);
             _win.Show();
-            //this.Close();
+            this.Close();
         }
     }
 }

@@ -51,13 +51,6 @@ namespace Calanthe
             _win.Show();
         }
 
-        private void Research_bt_Click(object sender, RoutedEventArgs e)
-        {
-            var current_item = CalantheEntities.GetContext().Vocabulary.ToList();
-            current_item = current_item.Where(p => p.Translation.ToString().ToLower().Contains(tbResearch.Text.ToLower())).ToList();
-            dbWords.ItemsSource = current_item;
-        }
-
         private void edit_b_Click_1(object sender, RoutedEventArgs e)
         {
             EditWords _win = new EditWords(mail, _context, sender, this);
@@ -78,6 +71,24 @@ namespace Calanthe
             DelWords _win = new DelWords(mail, _context, sender, this);
             _win.Show();
             this.Close();
+        }
+
+        private void tbResearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            if (tbResearch.Text == string.Empty) 
+            {
+            var current_item1 = CalantheEntities.GetContext().Vocabulary.ToList();
+            current_item1 = current_item1.Where(p => p.Email.ToString().ToLower().Contains(mail.ToLower())).ToList();
+            dbWords.ItemsSource = current_item1;
+            }
+
+            else
+            {
+                var current_item = CalantheEntities.GetContext().Vocabulary.ToList();
+                current_item = current_item.Where(p => p.Word.ToString().ToLower().Contains(tbResearch.Text.ToLower())).ToList();
+                dbWords.ItemsSource = current_item;
+            }
         }
     }
 }

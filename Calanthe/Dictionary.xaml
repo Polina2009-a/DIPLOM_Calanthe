@@ -131,9 +131,21 @@
     </Style>
 
     <Style TargetType="DataGrid" x:Key="data_grid">
-        <Setter Property="Background" Value="#FFC3C3C3"/>
-        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Background" Value="#FFD6CBD6"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="AutoGenerateColumns" Value="False"/>
         <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
+
+    <Style TargetType="Menu" x:Key="menu">
+        <Setter Property="Background" Value="#AF5FC4"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style TargetType="MenuItem" x:Key="menuitem">
+        <Setter Property="Background" Value="#AF5FC4"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
     </Style>
 </ResourceDictionary>

@@ -74,7 +74,19 @@
                 </TextBox>
             </Grid>
 
-            <Button Grid.Row="0" Content="..." HorizontalAlignment="Right" Margin="0,0,220,29" Width="50" Height="45"  VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click"></Button>
+            <!--<Button Style="{StaticResource Research}" Grid.Row="0" Content="Редактировать" HorizontalAlignment="Right" Margin="0,0,170,29" Width="164" Height="38" VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click" Panel.ZIndex="2"></Button>-->
+
+            <Menu Style="{StaticResource menu}" Height="24" VerticalAlignment="Bottom" Margin="0,0,224,58" HorizontalAlignment="Right" Width="133" Panel.ZIndex="3">
+                <MenuItem Style="{StaticResource menuitem}" Header="Редактировать" Height="24" Width="133" >
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\Полина\Desktop\Calanthe\Calanthe\Profil\Pencil.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem x:Name="NewFoto"  Style="{StaticResource menuitem}" Header="Загрузить" Click="NewFoto_Click"/>
+                    <MenuItem x:Name="Del"  Style="{StaticResource menuitem}" Header="Удалить" Click="Del_Click"/>
+                </MenuItem>
+
+            </Menu>
+
 
             <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="268,44,268,29"></Ellipse>
         </Grid>

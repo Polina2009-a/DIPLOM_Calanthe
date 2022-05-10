@@ -64,9 +64,20 @@ namespace Calanthe
 
         private void Practic_b_Click(object sender, RoutedEventArgs e)
         {
-            Practice _win = new Practice(mail);
-            this.Close();
-            _win.Show();
+            LessonsPractic.Visibility = Visibility.Visible;
+            Back_b3.Visibility = Visibility.Visible;
+            Back_b.Visibility = Visibility.Hidden;
+            PanelLessons.Visibility = Visibility.Hidden;
+            Dictionary_b.Visibility = Visibility.Hidden;
+        }
+
+        private void Back_b3_Click(object sender, RoutedEventArgs e)
+        {
+            LessonsPractic.Visibility = Visibility.Hidden;
+            Back_b3.Visibility = Visibility.Hidden;
+            Back_b2.Visibility = Visibility.Visible;
+            PanelMenu.Visibility = Visibility.Visible;
+            Dictionary_b.Visibility = Visibility.Visible;
         }
     }
 }

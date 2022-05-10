@@ -53,40 +53,40 @@ namespace Calanthe
             _win.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            byte[] buffer;
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.FileName = "Document";
-            dlg.DefaultExt = ".docx";
-            dlg.Filter = "Text documents (.png; .jpg) | *.png;*.jpg;";
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    byte[] buffer;
+        //    Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+        //    dlg.FileName = "Document";
+        //    dlg.DefaultExt = ".docx";
+        //    dlg.Filter = "Text documents (.png; .jpg) | *.png;*.jpg;";
 
-            Nullable<bool> result = dlg.ShowDialog();
+        //    Nullable<bool> result = dlg.ShowDialog();
 
-            if (result == true)
-            {
-                filename = dlg.FileName;
-                buffer = File.ReadAllBytes(filename);
-                try
-                {
-                    Student student = new Student();
-                    foreach (var user in db.Student)
-                    {
-                        if (Mail.Text == user.Email)
-                        {
-                            user.Image = buffer;
-                            imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
-                            break;
-                        }
-                    }
-                    db.SaveChanges();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Ошибка");
-                }
-            }
-        }
+        //    if (result == true)
+        //    {
+        //        filename = dlg.FileName;
+        //        buffer = File.ReadAllBytes(filename);
+        //        try
+        //        {
+        //            Student student = new Student();
+        //            foreach (var user in db.Student)
+        //            {
+        //                if (Mail.Text == user.Email)
+        //                {
+        //                    user.Image = buffer;
+        //                    imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
+        //                    break;
+        //                }
+        //            }
+        //            db.SaveChanges();
+        //        }
+        //        catch (Exception)
+        //        {
+        //            MessageBox.Show("Ошибка");
+        //        }
+        //    }
+        //}
 
         private void GoOut_b_Click(object sender, RoutedEventArgs e)
         {
@@ -129,6 +129,61 @@ namespace Calanthe
             }
             image.Freeze();
             return image;
+        }
+
+        private void NewFoto_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] buffer;
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.FileName = "Document";
+            dlg.DefaultExt = ".docx";
+            dlg.Filter = "Text documents (.png; .jpg) | *.png;*.jpg;";
+
+            Nullable<bool> result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                filename = dlg.FileName;
+                buffer = File.ReadAllBytes(filename);
+                try
+                {
+                    Student student = new Student();
+                    foreach (var user in db.Student)
+                    {
+                        if (Mail.Text == user.Email)
+                        {
+                            user.Image = buffer;
+                            imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
+                            break;
+                        }
+                    }
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ошибка");
+                }
+            }
+        }
+
+        private void Del_Click(object sender, RoutedEventArgs e)
+        {
+            int n = 0;
+            byte[] buffer;
+            buffer = System.IO.File.ReadAllBytes(@"ziro_foto.png");
+
+            Student student = new Student();
+            foreach (var user in db.Student)
+            {
+                if (Mail.Text == user.Email)
+                {
+                    user.Image = buffer;
+                    imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
+                    break;
+                }
+            }
+            db.SaveChanges();
+
         }
     }
 }
