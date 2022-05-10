@@ -32,14 +32,13 @@ namespace Calanthe
         {
             InitializeComponent();
             this.mail = mail;
+
             
             foreach (var user in db.Student)
             {
                 if (mail == user.Email)
                 {
-                    imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\Полина\Desktop\Calanthe\Calanthe\Registration\ziro_foto.png")));
-                    //File.WriteAllBytes(filename,user.Image);
-                    //imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"filename")));
+                    imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
                     break;
                 }
             }
@@ -57,6 +56,24 @@ namespace Calanthe
             Menu _win = new Menu(mail);
             this.Close();
             _win.Show();
+        }
+
+        private static BitmapImage LoadImage(byte[] imageData)
+        {
+            if (imageData == null || imageData.Length == 0) return null;
+            var image = new BitmapImage();
+            using (var mem = new MemoryStream(imageData))
+            {
+                mem.Position = 0;
+                image.BeginInit();
+                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = null;
+                image.StreamSource = mem;
+                image.EndInit();
+            }
+            image.Freeze();
+            return image;
         }
     }
 }

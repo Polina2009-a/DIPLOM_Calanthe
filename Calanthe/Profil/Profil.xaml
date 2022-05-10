@@ -60,6 +60,7 @@
             </WrapPanel>
 
             <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="273,46,271,35"></Ellipse>
+            <Image x:Name="imagetest" HorizontalAlignment="Left" Width="245" Margin="0,46,0,0"></Image>
         </Grid>
 
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />

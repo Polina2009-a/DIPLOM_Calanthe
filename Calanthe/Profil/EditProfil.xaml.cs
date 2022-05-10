@@ -38,7 +38,7 @@ namespace Calanthe
             {
                 if (Mail.Text == user.Email)
                 {
-                    imageEllipse.Fill = new ImageBrush(new BitmapImage(new Uri(@"C:\Users\Полина\Desktop\Calanthe\Calanthe\Registration\ziro_foto.png")));
+                    imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
                     Login.Text = user.Login;
                     Password.Text = user.Password;
                     break;
@@ -75,6 +75,7 @@ namespace Calanthe
                         if (Mail.Text == user.Email)
                         {
                             user.Image = buffer;
+                            imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
                             break;
                         }
                     }
@@ -110,6 +111,24 @@ namespace Calanthe
             }
             db.SaveChanges();
             MessageBox.Show("Сохранено!");
+        }
+
+        private static BitmapImage LoadImage(byte[] imageData)
+        {
+            if (imageData == null || imageData.Length == 0) return null;
+            var image = new BitmapImage();
+            using (var mem = new MemoryStream(imageData))
+            {
+                mem.Position = 0;
+                image.BeginInit();
+                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = null;
+                image.StreamSource = mem;
+                image.EndInit();
+            }
+            image.Freeze();
+            return image;
         }
     }
 }
