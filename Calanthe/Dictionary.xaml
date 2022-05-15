@@ -76,6 +76,7 @@
         <Setter Property="Width" Value="195"/>
         <Setter Property="Foreground" Value="#FF171A27"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background" Value="#AF5FC4"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -147,5 +148,24 @@
         <Setter Property="Background" Value="#AF5FC4"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style TargetType="Expander" x:Key="ex">
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="IsExpanded" Value="True"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="textbox">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Foreground" Value="#FF171A27"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="img">
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="100"/>
     </Style>
 </ResourceDictionary>

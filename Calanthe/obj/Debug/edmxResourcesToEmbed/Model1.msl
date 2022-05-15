@@ -57,6 +57,7 @@
           <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="FileLesson" ColumnName="FileLesson" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

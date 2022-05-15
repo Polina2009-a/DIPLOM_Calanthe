@@ -12,33 +12,33 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NumberLesson" Type="int" Nullable="false" />
           <Property Name="NumberQuestion" Type="int" Nullable="false" />
-          <Property Name="Answer" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PracticalLesson">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Statistics">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NumberLesson" Type="int" Nullable="false" />
-          <Property Name="StatusTeoria" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="StatusPractic" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="StatusTeoria" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="StatusPractic" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="Email" />
           </Key>
-          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Login" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Image" Type="varbinary(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -55,17 +55,18 @@
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="FileLesson" Type="varbinary(max)" />
+          <Property Name="filename" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Vocabulary">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Word" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Translation" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Word" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Translation" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK_Answers_PracticalLesson">
           <End Role="PracticalLesson" Type="Self.PracticalLesson" Multiplicity="1" />
@@ -168,7 +169,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NumberLesson" Type="Int32" Nullable="false" />
           <Property Name="NumberQuestion" Type="Int32" Nullable="false" />
-          <Property Name="Answer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Answer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="PracticalLesson" Relationship="Self.FK_Answers_PracticalLesson" FromRole="Answers" ToRole="PracticalLesson" />
         </EntityType>
         <EntityType Name="PracticalLesson">
@@ -176,7 +177,7 @@
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Answers" Relationship="Self.FK_Answers_PracticalLesson" FromRole="PracticalLesson" ToRole="Answers" />
           <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_PracticalLesson" FromRole="PracticalLesson" ToRole="Statistics" />
         </EntityType>
@@ -185,10 +186,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NumberLesson" Type="Int32" Nullable="false" />
-          <Property Name="StatusTeoria" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StatusPractic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusTeoria" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusPractic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="PracticalLesson" Relationship="Self.FK_Statistics_PracticalLesson" FromRole="Statistics" ToRole="PracticalLesson" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Statistics_Student" FromRole="Statistics" ToRole="Student" />
           <NavigationProperty Name="TheoreticalLesson" Relationship="Self.FK_Statistics_TheoreticalLesson" FromRole="Statistics" ToRole="TheoreticalLesson" />
@@ -197,10 +198,10 @@
           <Key>
             <PropertyRef Name="Email" />
           </Key>
-          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Login" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_Student" FromRole="Student" ToRole="Statistics" />
           <NavigationProperty Name="Vocabulary" Relationship="Self.FK_Vocabulary_Student" FromRole="Student" ToRole="Vocabulary" />
         </EntityType>
@@ -219,8 +220,9 @@
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FileLesson" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="filename" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_TheoreticalLesson" FromRole="TheoreticalLesson" ToRole="Statistics" />
         </EntityType>
         <EntityType Name="Vocabulary">
@@ -228,9 +230,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Word" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Translation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Word" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Translation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Vocabulary_Student" FromRole="Vocabulary" ToRole="Student" />
         </EntityType>
         <Association Name="FK_Answers_PracticalLesson">
@@ -384,6 +386,7 @@
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="FileLesson" ColumnName="FileLesson" />
+                <ScalarProperty Name="filename" ColumnName="filename" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
